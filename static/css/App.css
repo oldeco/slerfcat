@@ -1,0 +1,419 @@
+@font-face {
+    font-family: Wonder;
+    src: url('./assets/fonts/wonder.ttf');
+}
+
+@font-face {
+    font-family: Impact;
+    src: url('./assets/fonts/impact.ttf');
+}
+
+@font-face {
+    font-family: Daisy;
+    src: url('./assets/fonts/daisy.ttf');
+}
+
+@font-face {
+    font-family: fairy;
+    src: url(./assets/fonts/fairy.ttf)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --width: 200px;
+    --elheight: 300px;
+    --leheight: 300px;
+    --x-speed: 13s;
+    --y-speed: 7s;
+    --w-speed: 8s;
+    --z-speed: 4s;
+    --transition-speed: 2.2s;
+}
+
+.bounce {
+    position: fixed;
+    opacity: 100%;
+    z-index: 3;
+}
+
+.bounce1 {
+    position: fixed;
+    opacity: 100%;
+    z-index: 2;
+}
+
+.el {
+    width: var(--width);
+    height: var(--elheight);
+    border-radius: 15px;
+}
+
+.le {
+    width: var(--width);
+    height: var(--leheight);
+    border-radius: 15px;
+}
+
+.x {
+    animation: x var(--x-speed) linear infinite alternate;
+}
+
+.y {
+    animation: y var(--y-speed) linear infinite alternate;
+}
+
+.w {
+    animation: x var(--w-speed) linear infinite alternate;
+}
+
+.z {
+    animation: y var(--z-speed) linear infinite alternate;
+}
+
+@keyframes x {
+    100% {
+        transform: translateX(calc(100vw - var(--width)));
+    }
+}
+
+@keyframes y {
+    100% {
+        transform: translateY(calc(500% - var(--width)));
+    }
+}
+
+.App {
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-size: 30px;
+    background-image: url("./assets/edit.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    /* Or whatever height you want */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 45px;
+}
+
+.nft {
+    display: flex;
+    justify-content: center;
+    /* Vertically center the content */
+    border: 5px solid #ffffff;
+    /* Add a round border */
+    border-radius: 50px;
+    /* Make the border round */
+    padding-top: 30px;
+    /* Add padding inside the round border */
+    font-family: Wonder;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 120px;
+    background-color: #5bb0cc;
+    margin: 80px 80px;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    /* Vertically center the content */
+    margin-left: 1%;
+    margin-right: 0.6%;
+    border: 5px solid #5bb0cc;
+    /* Add a round border */
+    border-radius: 50px;
+    /* Make the border round */
+    padding: 10px 20px;
+    /* Add padding inside the round border */
+    font-family: Impact;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    background-color: #0e335b;
+}
+
+.item span {
+    padding-left: 10px;
+}
+
+.itembut {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    /* Vertically center the content */
+    border: 5px solid #5bb0cc;
+    /* Add a round border */
+    border-radius: 50px;
+    /* Make the border round */
+    padding: 20px 60px;
+    /* Add padding inside the round border */
+    font-family: Impact;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    background-color: #0e335b;
+}
+
+.itembut span {
+    padding-left: 30px;
+}
+
+h1 {
+    font-family: Impact;
+    font-weight: 1;
+    font-size: 70px;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+    color: #ebeae3
+}
+
+.title {
+    font-family: Wonder;
+    padding: 0px 75px 50px 75px;
+    font-family: Wonder;
+    font-weight: 0;
+    font-size: 48px;
+    -webkit-text-stroke-width: 0.75px;
+    color: #ebeae3
+}
+
+.main {
+    font-size: 50px;
+    margin: 50px 100px;
+    font-family: Wonder, sans-serif;
+    color: #ebeae3;
+}
+
+.main2 {
+    font-size: 50px;
+    margin: 50px 100px;
+    font-family: Wonder, sans-serif;
+    color: #ebeae3;
+}
+
+.top {
+    font-size: 120px;
+    width: 100%;
+}
+
+.bottom {
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.App-logo {
+    border-radius: 20px;
+    margin-top: 75px;
+}
+
+.front {
+    z-index: 10;
+    position: relative;
+}
+
+.fairy {
+    font-family: fairy;
+    color: #ebeae3;
+}
+
+.about {
+    margin: 75px;
+}
+
+.line {
+    margin: 0;
+}
+
+.swap {
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    height: 700px;
+    width: 800px;
+}
+
+.lef {
+    margin-right: 60px;
+}
+
+/* Add this CSS to your existing styles */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #5bb0cc;
+    color: hsl(53, 17%, 91%);
+    padding: 10px 20px 20px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: Daisy;
+}
+
+.uni {
+    background-color: #ff2cd1;
+    color: #ebeae3;
+    padding: 10px 20px 20px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: Daisy;
+}
+
+.flooz {
+    background-color: #5e38f4;
+    color: #ebeae3;
+    padding: 10px 20px 20px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: Daisy;
+}
+
+/* Style the dropdown content container */
+
+.dropdown-content-container {
+    display: none;
+    position: absolute;
+    background-color: #0e335b;
+    width: max-content;
+    /* Set a fixed width */
+    z-index: 100;
+    border-radius: 15px;
+}
+
+/* Style the dropdown content links */
+
+.dropdown-content-container a {
+    font-size: 40px;
+    font-family: Wonder, sans-serif;
+    color: #ebeae3;
+    padding: 20px 55px;
+    text-decoration: none;
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center vertically */
+    width: 100%;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+/* Add this CSS to style the image icons */
+
+.dropdown-content-container a img {
+    margin-right: 20px;
+    /* Add spacing between icon and text */
+}
+
+/* Style the dropdown content links on hover */
+
+.dropdown-content-container a:hover {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+}
+
+/* Create a dropdown arrow using a pseudo-element */
+
+.dropbtn::after {
+    content: '\25BC';
+    /* Down arrow character */
+    margin-left: 15px;
+}
+
+/* Show the dropdown content when the dropdown button is hovered or clicked */
+
+.dropdown:hover .dropdown-content-container {
+    display: block;
+}
+
+/* Ensure even spacing between dropdown buttons */
+
+.dropdown+.dropdown {
+    margin-left: 12px;
+}
+
+.name {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    font-size: 160px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: Wonder, sans-serif;
+    color: #5bb0cc;
+}
+
+.iname {
+    font-family: Wonder, sans-serif;
+    font-size: 80px;
+    color: #ebeae3;
+}
+
+.blue {
+    color: #5bb0cc;
+    font-size: 48px;
+}
+
+.smol {
+    font-family: Wonder, sans-serif;
+    font-size: 30px;
+}
+
+.faqt {
+    font-family: Impact;
+    font-weight: 0;
+    color: #ebeae3;
+    font-size: 60px;
+}
+
+.faq {
+    font-family: Wonder;
+    font-weight: 0;
+    font-size: 48px;
+    -webkit-text-stroke-width: 0.75px;
+    color: #ebeae3;
+    padding: 0 75px;
+}
+
+.dwayne {
+    width: 500px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.caption {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-style: italic;
+}
